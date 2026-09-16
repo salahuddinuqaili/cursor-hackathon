@@ -1,0 +1,13 @@
+﻿{
+  "event": "Cursor Hackathon Berlin @Taxfix",
+  "generatedFor": "war-room live check",
+  "agents": [
+    {"id": "hackermans", "displayName": "Hackermans", "lane": "war-room lead: clock, ruthless scope, demo narrative", "required": true, "howToVerify": "1:1 LIVE ack from Hackermans"},
+    {"id": "cursor", "displayName": "cursor", "lane": "Cursor craft, credits checklist, Eugene prompts, co-drive when Sal allows", "required": true, "howToVerify": "SendToAgent LIVE ack"},
+    {"id": "ivan", "displayName": "ivan", "lane": "Hermes HQ: Titans Heavy orchestration", "required": true, "howToVerify": "SendToAgent LIVE ack"},
+    {"id": "titans", "displayName": "Hermes Titans", "lane": "titan1–6 Heavy grok-4.6 parallel coding seats", "required": true, "howToVerify": "ivan Titans value smoke with concrete parallel outputs"},
+    {"id": "coder", "displayName": "coder", "lane": "production engineering on-call", "required": false, "howToVerify": "SendToAgent LIVE ack"},
+    {"id": "feedback", "displayName": "feedback", "lane": "research / specs on-call", "required": false, "howToVerify": "SendToAgent LIVE ack"},
+    {"id": "grokker", "displayName": "grokker", "lane": "fleet hygiene only", "required": false, "howToVerify": "SendToAgent LIVE ack"}
+  ]
+}

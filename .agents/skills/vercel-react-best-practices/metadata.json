@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "organization": "Vercel Engineering",
+  "date": "January 2026",
+  "abstract": "Performance optimization guide for TypeScript React applications using Vite, React Router, Hono, TanStack Query, and React Compiler. Contains 69 rules across 8 categories, prioritized by impact from eliminating waterfalls and reducing bundle size to focused runtime patterns.",
+  "references": [
+    "https://react.dev",
+    "https://reactrouter.com",
+    "https://vite.dev",
+    "https://hono.dev",
+    "https://tanstack.com/query/latest",
+    "https://base-ui.com/react"
+  ]
+}

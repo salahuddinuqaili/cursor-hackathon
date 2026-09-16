@@ -1,1 +1,1 @@
-# cursor-hackaton
+# cursor-hackathon

@@ -32,6 +32,37 @@ export function computeConfidence(expenseCount: number): number {
   return Math.min(92, grown);
 }
 
+export function isInCurrentIsoWeek(isoDate: string, now = new Date()): boolean {
+  const created = new Date(isoDate);
+  if (Number.isNaN(created.getTime())) {
+    return false;
+  }
+  const start = startOfIsoWeek(now);
+  const end = new Date(start);
+  end.setUTCDate(end.getUTCDate() + 7);
+  return created >= start && created < end;
+}
+
+export function startOfIsoWeek(now: Date): Date {
+  const day = now.getUTCDay(); // 0 Sun .. 6 Sat
+  const isoDay = day === 0 ? 7 : day; // 1 Mon .. 7 Sun
+  const start = new Date(
+    Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()),
+  );
+  start.setUTCDate(start.getUTCDate() - (isoDay - 1));
+  return start;
+}
+
+export function weeklySaveEuro(
+  expenses: readonly YearFileExpense[],
+  now = new Date(),
+): number {
+  const week = expenses.filter((expense) =>
+    isInCurrentIsoWeek(expense.createdAt, now),
+  );
+  return ytdImpactEuro(week);
+}
+
 export function ytdImpactEuro(expenses: readonly YearFileExpense[]): number {
   return (
     Math.round(

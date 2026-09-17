@@ -1,14 +1,16 @@
 # cursor-hackathon
 
-Taxfix Cursor Hackathon Berlin — **Year File** pulse demo.
+Taxfix Cursor Hackathon Berlin — **Year File** weekly tax-save pulse.
+
+See `TEAM-PLAN/` for shared truth (lanes, demo, score).
 
 ## Demo path (2 minutes)
 
-1. Open `/` (index is the pulse — not the counter scaffold).
-2. Add one expense in plain text (try `coworking day pass` + `45`).
-3. Read the instant verdict, why, and rough € YTD impact.
-4. Watch **Filing confidence** tick up; expense lands in the Year File.
-5. Note the return hook: come back next month for the score — no nags.
+1. Open `/` (index is the pulse).
+2. Add this week’s expense (try `coworking day pass` + `45`).
+3. Instant readout: deductible? why? **€ save this week / YTD**.
+4. Year File + filing confidence grows.
+5. Return reason: open next week to see the score — no nags.
 
 Counter scaffold remains at `/counter`.
 
@@ -19,31 +21,12 @@ pnpm install
 pnpm dev
 ```
 
-Node `>=24 <25`. Package manager: `pnpm@11` (see `package.json`).
+Node `>=24 <25`. Agents must not start `pnpm run dev` if Sal already has it.
 
-Do **not** have agents start the long-lived `pnpm run dev` if Sal already has it running.
+## Pitch VIDEO
 
-## Pitch VIDEO script (~2:00)
-
-**0:00–0:15 — Hook**  
-"Filing season is a panic product. We built the opposite: Year File — taxes year-round, on your terms."
-
-**0:15–0:45 — Problem**  
-"People ignore deductibles until April, then scramble. Anxious apps nag. We want financially savvy control — clever, not guilty."
-
-**0:45–1:20 — Demo**  
-Screen: open `/`. Type expense → instant "likely / maybe / unlikely", plain why, rough € impact YTD. Confidence grows. Saved to Year File.
-
-**1:20–1:45 — Why return**  
-"No streaks. No fake urgency. The reason to come back is the score next month — a dossier that makes April boring in a good way."
-
-**1:45–2:00 — Agents + close**  
-"Built with Cursor + a small agent trail: Hackermans scoped, Sapne co-drive, Cursor Agent shipped the pulse. One vertical slice. That's the point."
+Follow `TEAM-PLAN/DEMO.md`. Upload by **21:00** Berlin. Sal owns upload + present.
 
 ## Agent trail
 
-See [`HOW-WE-BUILT.md`](./HOW-WE-BUILT.md).
-
-## Scope freeze
-
-Only the Year File deductible pulse. No notifications, streaks, filing-only tools, or architecture tours.
+See [`HOW-WE-BUILT.md`](./HOW-WE-BUILT.md) and `TEAM-PLAN/HOW-WE-BUILT.md`.
